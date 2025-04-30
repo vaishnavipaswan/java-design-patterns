@@ -1,0 +1,30 @@
+Adapter Design Pattern
+
+The Adapter Pattern is a structural design pattern that allows objects with incompatible interfaces to work together. It acts as a bridge between two incompatible interfaces by wrapping one of the objects and exposing a compatible interface to the client.
+
+The main goal is to convert the interface of a class into another interface the client expects, enabling classes to work together that couldn’t otherwise because of incompatible interfaces.
+
+There are two common types of adapters:
+- Class Adapter: Uses inheritance to adapt one interface to another.
+- Object Adapter: Uses composition to wrap the adaptee in a new class.
+
+Key Components:
+- Target: The interface expected by the client.
+- Adaptee: The existing interface that needs adapting.
+- Adapter: Implements the Target interface and translates requests to the Adaptee.
+
+Real-World Analogy:
+Consider a power adapter that allows a device with a two-pin plug to be used with a three-pin socket. The adapter doesn't change the plug or the socket but makes them compatible with each other.
+
+Usage Scenarios:
+- When you want to use an existing class but its interface does not match the one you need.
+- When you want to reuse legacy code or third-party APIs without modifying their source.
+
+Benefits:
+- Promotes code reusability by adapting old interfaces to new systems.
+- Supports the open/closed principle — classes can be extended without modifying existing code.
+- Makes it easier to use classes that otherwise wouldn't work together.
+
+Limitations:
+- Increases the number of classes in the system.
+- Complexity may grow if there are many different adapters to create.
