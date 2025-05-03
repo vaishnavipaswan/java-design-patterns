@@ -1,0 +1,28 @@
+Builder Design Pattern
+
+The Builder Pattern is a creational design pattern that separates the construction of a complex object from its representation so that the same construction process can create different representations.
+
+It is useful when an object needs to be created step-by-step, especially when it has a large number of optional parameters or requires different representations. The pattern allows for more readable object creation code and helps maintain immutability.
+
+Key Components:
+- Builder: Declares abstract steps to build parts of the product.
+- ConcreteBuilder: Implements the Builder interface to construct and assemble parts of the product.
+- Product: The complex object under construction.
+- Director (optional): Controls the construction sequence and uses a builder instance.
+
+Real-World Analogy:
+Think of a meal builder at a fast food restaurant. You can choose your own combination of burger, fries, and drink. The process to assemble the meal is the same, but the result varies depending on what options you choose.
+
+Usage Scenarios:
+- When an object requires numerous fields to be set and some are optional.
+- When the construction process must allow different representations for the same object.
+- When you want to encapsulate the construction logic in separate classes.
+
+Benefits:
+- Makes object construction clear and manageable.
+- Allows step-by-step construction and better control over the creation process.
+- Improves code readability and reduces telescoping constructor anti-patterns.
+
+Limitations:
+- Can increase the number of classes if not managed well.
+- Often requires more code than simpler patterns like telescoping constructors for simple objects.
