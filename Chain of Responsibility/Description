@@ -1,0 +1,27 @@
+Chain of Responsibility Design Pattern
+
+The Chain of Responsibility (CoR) Pattern is a behavioral design pattern that allows a request to pass through a chain of handlers. Each handler decides either to process the request or to pass it to the next handler in the chain.
+
+This pattern decouples the sender of a request from its receivers by giving multiple objects a chance to handle the request, thus promoting loose coupling and flexibility in assigning responsibilities.
+
+Key Components:
+- Handler: Declares an interface for handling requests and for setting the next handler.
+- ConcreteHandler: Implements the handler interface and processes the request or forwards it.
+- Client: Initiates the request and builds the chain of handlers.
+
+Real-World Analogy:
+Think of a customer service system where a request is first handled by a chatbot. If it can’t resolve the issue, it passes the request to a human agent, and if needed, the request is escalated to a manager. Each handler has the opportunity to process the request.
+
+Usage Scenarios:
+- When more than one object can handle a request and the handler is not known a priori.
+- When you want to issue a request to one of several handlers without coupling the sender to the receiver.
+- When the request handling logic should be dynamically changeable at runtime.
+
+Benefits:
+- Reduces coupling between sender and receiver.
+- Adds flexibility in assigning responsibility to objects.
+- Allows dynamic modification of the handler chain at runtime.
+
+Limitations:
+- May result in requests going unhandled if no handler in the chain can process it.
+- Can be harder to debug due to the dynamic nature of handler chains.
