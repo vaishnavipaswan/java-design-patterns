@@ -1,0 +1,28 @@
+Composite Design Pattern
+
+The Composite Pattern is a structural design pattern that lets you compose objects into tree-like structures to represent part-whole hierarchies. It allows clients to treat individual objects and compositions of objects uniformly.
+
+This pattern is particularly useful when dealing with recursive structures like trees or organizational charts where some objects can contain others, and you want to perform operations across all elements in a consistent way.
+
+Key Components:
+- Component: Defines the interface for all objects in the composition, both leaf and composite.
+- Leaf: Represents individual objects in the composition (i.e., objects with no children).
+- Composite: Represents nodes that can have children (i.e., objects that can contain other Components).
+- Client: Uses the Component interface to interact with both Leafs and Composites uniformly.
+
+Real-World Analogy:
+Consider a file system: files are leaf nodes and directories are composites that can contain both files and other directories. You can perform operations like size calculation, display, or deletion using the same interface on both.
+
+Usage Scenarios:
+- When you want to represent part-whole hierarchies (e.g., file systems, GUIs, organizations).
+- When you want clients to ignore the difference between compositions of objects and individual objects.
+
+Benefits:
+- Simplifies client code by treating all elements uniformly.
+- Makes it easier to add new types of components.
+- Promotes recursive and flexible object structures.
+
+Limitations:
+- Can make the system overly general, making type-checking and behavior enforcement harder.
+- May lead to a design that is harder to restrict to certain structures or object types.
+
