@@ -1,0 +1,28 @@
+Decorator Design Pattern
+
+The Decorator Pattern is a structural design pattern that allows behavior to be added to an individual object, dynamically, without affecting the behavior of other objects from the same class.
+
+It is useful when subclassing would lead to an explosion of classes to cover every possible combination of behavior. Instead of modifying or extending a class, decorators "wrap" the original object and enhance or override its functionality.
+
+Key Components:
+- Component: The base interface or abstract class that defines the operations that can be altered by decorators.
+- ConcreteComponent: The core implementation of the component interface.
+- Decorator: An abstract class that implements the component interface and holds a reference to a component object.
+- ConcreteDecorator: Extends the Decorator class and adds new behavior before or after delegating to the component.
+
+Real-World Analogy:
+Consider a coffee shop order system. You can order a base coffee, and then dynamically add features like milk, sugar, or whipped cream as decorators. Each added ingredient is a decorator that adds its own cost and description.
+
+Usage Scenarios:
+- When you want to add responsibilities to objects dynamically and transparently.
+- When subclassing is impractical due to too many possible combinations of features.
+- When extending functionality without modifying existing code is preferred (open/closed principle).
+
+Benefits:
+- Enhances flexibility by allowing combinations of behaviors at runtime.
+- Promotes code reuse through composition rather than inheritance.
+- Follows the open/closed principle by allowing behavior to be extended without modifying existing code.
+
+Limitations:
+- Can lead to many small classes if overused.
+- Debugging can be complex due to the layered structure of decorators.
