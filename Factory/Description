@@ -1,0 +1,28 @@
+Factory Method Design Pattern
+
+The Factory Method Pattern is a creational design pattern that provides an interface for creating objects in a superclass but allows subclasses to alter the type of objects that will be created.
+
+Rather than calling a constructor directly to create an object, the client calls a factory method, which abstracts away the instantiation logic. This pattern promotes loose coupling and adheres to the open/closed principle, allowing new product types to be added without modifying existing code.
+
+Key Components:
+- Product: The common interface or abstract class for objects the factory method creates.
+- ConcreteProduct: Specific implementations of the Product.
+- Creator: Declares the factory method which returns Product objects.
+- ConcreteCreator: Overrides the factory method to return an instance of a ConcreteProduct.
+
+Real-World Analogy:
+Consider a logistics application. Depending on the transportation type (e.g., road, sea), the application may need to create a Truck or Ship object. Using the Factory Method, you can create the appropriate transport object without knowing the exact class that will be instantiated.
+
+Usage Scenarios:
+- When the exact type of object to create is determined by subclassing.
+- When a class cannot anticipate the class of objects it needs to create.
+- When you want to delegate the responsibility of instantiating classes to subclasses.
+
+Benefits:
+- Promotes loose coupling between the client and the concrete classes it uses.
+- Supports adding new types of products without changing existing code.
+- Encapsulates object creation logic in one place.
+
+Limitations:
+- May require creating a new subclass for each type of product.
+- Increases the number of classes in the system, which can add complexity.
