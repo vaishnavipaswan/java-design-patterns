@@ -1,0 +1,27 @@
+Mediator Design Pattern
+
+The Mediator Pattern is a behavioral design pattern that promotes loose coupling by ensuring that objects (colleagues) communicate with each other only through a central mediator object, rather than directly.
+
+This pattern encapsulates how a set of objects interact, allowing you to change interaction behavior independently of the objects themselves. It is especially useful when a system has many interacting classes, and their dependencies become complex and hard to maintain.
+
+Key Components:
+- Mediator: Defines an interface for communication between colleague objects.
+- ConcreteMediator: Implements the communication logic and coordinates interactions between colleagues.
+- Colleague: Components that communicate through the mediator instead of referencing each other directly.
+
+Real-World Analogy:
+Consider an air traffic control system. Aircraft (colleagues) do not communicate directly with each other. Instead, they send and receive instructions from the air traffic controller (mediator), who manages their interactions and ensures safe coordination.
+
+Usage Scenarios:
+- When objects communicate in a well-defined but complex way, and you want to simplify their interactions.
+- When you want to centralize control logic that's currently spread across multiple classes.
+- When tight coupling between classes is making code difficult to maintain.
+
+Benefits:
+- Reduces direct dependencies between classes.
+- Simplifies object communication and interaction logic.
+- Encourages single-responsibility by centralizing control.
+
+Limitations:
+- The mediator can become overly complex if it handles too many responsibilities.
+- May introduce a performance bottleneck if all communication goes through one mediator.
