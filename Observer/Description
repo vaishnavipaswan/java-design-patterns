@@ -1,0 +1,28 @@
+Observer Design Pattern
+
+The Observer Pattern is a behavioral design pattern that defines a one-to-many dependency between objects so that when one object (the subject) changes state, all its dependents (observers) are notified and updated automatically.
+
+This pattern is widely used to implement distributed event-handling systems, ensuring that components remain loosely coupled and can react to changes in other parts of the system without tight integration.
+
+Key Components:
+- Subject: Maintains a list of observers and provides methods to attach, detach, and notify them.
+- Observer: Defines an interface for receiving updates from the subject.
+- ConcreteSubject: Stores state of interest to ConcreteObservers and sends notifications when state changes.
+- ConcreteObserver: Implements the Observer interface to receive updates from the subject.
+
+Real-World Analogy:
+Think of a newspaper subscription. The newspaper publisher (subject) notifies all subscribers (observers) whenever a new edition is available. The subscribers don’t need to ask repeatedly; they simply react when notified.
+
+Usage Scenarios:
+- When changes to one object require updates to others, and you want to minimize coupling.
+- In event-driven systems like GUI frameworks, where multiple objects may need to react to user actions.
+- For implementing publish/subscribe mechanisms.
+
+Benefits:
+- Promotes loose coupling between subject and observers.
+- Supports dynamic relationships – observers can be added or removed at runtime.
+- Makes event-handling systems more flexible and scalable.
+
+Limitations:
+- May lead to unexpected updates if not carefully managed.
+- Can be difficult to debug, especially with a large number of observers or complex chains of updates.
