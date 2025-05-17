@@ -1,0 +1,31 @@
+Strategy Design Pattern
+
+The Strategy Pattern is a behavioral design pattern that defines a family of algorithms, encapsulates each one, and makes them interchangeable. This pattern lets the algorithm vary independently from the clients that use it.
+
+It promotes the use of composition over inheritance by allowing different strategies (algorithms) to be selected and applied at runtime without altering the client’s code.
+
+Key Components:
+- Strategy: An interface common to all supported algorithms.
+- ConcreteStrategy: Implements a specific algorithm or behavior.
+- Context: Maintains a reference to a Strategy object and allows switching strategies dynamically.
+
+Real-World Analogy:
+Consider a navigation app that can provide routes based on different strategies: fastest route, shortest distance, or avoiding toll roads. Each of these routing methods is a strategy that can be selected based on user preference.
+
+Usage Scenarios:
+- When multiple related algorithms exist for a specific task and you want to make them easily interchangeable.
+- To eliminate conditional statements (like if-else or switch-case) used for selecting behaviors.
+- When different behaviors can be selected at runtime.
+
+Benefits:
+- Cleaner code structure by separating algorithm logic from business logic.
+- Easy to add new strategies without changing the existing code.
+- Promotes the Open/Closed Principle and code reuse.
+
+Limitations:
+- The client must be aware of different strategies and their differences.
+- Can increase the number of classes in the system.
+
+Variants:
+- Strategies can be selected statically (at design time) or dynamically (at runtime).
+- Strategies can be implemented as lambda expressions or function pointers in modern languages.
