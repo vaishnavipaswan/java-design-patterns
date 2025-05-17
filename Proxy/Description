@@ -1,0 +1,34 @@
+Proxy Design Pattern
+
+The Proxy Pattern is a structural design pattern that provides a placeholder or surrogate for another object to control access to it. It acts as an intermediary that intercepts requests to the real object, allowing for additional functionality such as access control, logging, caching, or lazy initialization.
+
+Rather than interacting with the real object directly, the client uses a proxy which may decide to forward the request, handle it differently, or postpone it until necessary.
+
+Key Components:
+- Subject: An interface or abstract class common to both the real object and the proxy.
+- RealSubject: The actual object that performs the real operations.
+- Proxy: The class that controls access to the RealSubject and may add extra behavior.
+
+Real-World Analogy:
+Consider a credit card as a proxy for a bank account. When you swipe the card, it verifies the transaction and communicates with your bank (the real subject) without you accessing the bank directly. It adds an extra layer of control and safety.
+
+Types of Proxy:
+- Virtual Proxy: Delays object creation until it is needed.
+- Protection Proxy: Controls access based on permissions.
+- Remote Proxy: Represents an object in a different address space (e.g., in distributed systems).
+- Smart Reference: Adds additional actions (like reference counting or logging) when an object is accessed.
+
+Usage Scenarios:
+- To add a layer of security or access control to sensitive objects.
+- To defer the creation and initialization of expensive resources.
+- To log or monitor access to an object.
+- To interact with objects in remote systems or services.
+
+Benefits:
+- Adds control over the real object without changing its code.
+- Promotes open/closed principle by adding behavior without modifying existing classes.
+- Can optimize performance through lazy loading or caching.
+
+Limitations:
+- May introduce latency if overused or improperly designed.
+- Increases the number of classes and system complexity.
