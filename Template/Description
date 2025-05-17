@@ -1,0 +1,29 @@
+Template Method Design Pattern
+
+The Template Method Pattern is a behavioral design pattern that defines the skeleton of an algorithm in a base class but lets subclasses override specific steps of the algorithm without changing its overall structure.
+
+It enables code reuse and enforces a consistent algorithmic structure while allowing flexibility in certain parts of the process.
+
+Key Components:
+- AbstractClass: Defines the template method which outlines the algorithm structure, and includes abstract methods (or hooks) for customizable steps.
+- ConcreteClass: Implements the variable parts of the algorithm defined in the abstract class.
+
+Real-World Analogy:
+Think of a recipe for making tea or coffee. The steps like boiling water, pouring into a cup, and serving are fixed (template method), but the steps like adding tea leaves or coffee powder are different (customizable steps defined by subclasses).
+
+Usage Scenarios:
+- When multiple classes share the same overall process but differ in individual steps.
+- To avoid code duplication and encourage reuse of common logic.
+- In frameworks or libraries where you want users to define only specific steps of an algorithm.
+
+Benefits:
+- Promotes code reuse by defining common algorithm structure in a single place.
+- Encourages consistency across similar processes with variations.
+- Follows the Open/Closed Principle by allowing behavior extension without modifying existing code.
+
+Limitations:
+- Inflexible if the algorithm structure needs to change frequently.
+- Requires careful design to balance between common and customizable steps.
+
+Variants:
+- Hooks: Optional methods in the base class that can be overridden by subclasses to add behavior without requiring it.
