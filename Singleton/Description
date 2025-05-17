@@ -1,0 +1,31 @@
+Singleton Design Pattern
+
+The Singleton Pattern is a creational design pattern that ensures a class has only one instance and provides a global point of access to that instance.
+
+It is commonly used for managing shared resources such as configuration settings, logging, caching, or database connections, where a single object is sufficient and desirable.
+
+Key Components:
+- Singleton Class: Contains a private static instance of itself and a public static method to access that instance. The constructor is made private to prevent direct instantiation.
+
+Real-World Analogy:
+Think of an operating system's print spooler. It manages all print jobs and should only have one instance throughout the system to avoid conflicts. The Singleton ensures centralized control over the resource.
+
+Usage Scenarios:
+- When exactly one instance of a class is needed to coordinate actions across a system.
+- When an object needs to be shared globally without allowing multiple copies.
+- In cases like logging, configuration management, thread pools, or device access.
+
+Benefits:
+- Controlled access to the single instance.
+- Reduces memory usage when only one object is required.
+- Ensures consistent behavior across the application by reusing the same instance.
+
+Limitations:
+- Violates the Single Responsibility Principle by controlling both its lifecycle and behavior.
+- Can introduce global state into an application, making testing and debugging harder.
+- Not suitable for multithreaded environments unless implemented with proper synchronization.
+
+Variants:
+- Lazy Initialization: Instance is created when first needed.
+- Eager Initialization: Instance is created at class loading time.
+- Thread-safe Implementations: Use synchronized access or double-checked locking.
