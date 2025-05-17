@@ -1,0 +1,27 @@
+Prototype Design Pattern
+
+The Prototype Pattern is a creational design pattern that allows you to create new objects by copying (cloning) an existing object, known as the prototype, rather than creating new instances from scratch.
+
+This pattern is especially useful when object creation is costly or complex. Instead of instantiating a new object and configuring it, the client simply clones a prototype that is already set up.
+
+Key Components:
+- Prototype: Declares a cloning interface, typically with a `clone()` method.
+- ConcretePrototype: Implements the cloning logic, returning a new object that is a copy of itself.
+- Client: Creates new objects by calling the `clone()` method on a prototype.
+
+Real-World Analogy:
+Consider a document editor that allows users to duplicate a template. Instead of re-creating the formatting and layout each time, the user can copy the existing document structure and modify it as needed. This saves effort and ensures consistency.
+
+Usage Scenarios:
+- When object creation is expensive in terms of time or resources.
+- When many similar objects are needed with only minor variations.
+- When classes to instantiate are specified at runtime rather than compile-time.
+
+Benefits:
+- Reduces the cost and complexity of object creation.
+- Enables dynamic configuration and creation of objects.
+- Hides the complexity of instantiation logic from the client.
+
+Limitations:
+- Cloning complex objects that contain circular references or deep object graphs can be tricky.
+- Requires all classes to implement a clone method, which may not always be feasible.
